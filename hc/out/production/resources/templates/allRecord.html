@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <script  src="/jq/jquery-1.10.2.min.js"></script>
+    <script  src="/jq/allRecord.js"></script>
+    <title>所有记录</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 400px;
+            height: 500px;
+        }
+        .a{
+            position: absolute;
+            left: 25%;
+        }
+        td{
+            width: 200px;
+        }
+        .c{
+            position: absolute;
+            left: 3%;
+            top: 5%;
+        }
+        .j{
+            position: absolute;
+            left: 3%;
+            top: 15%;
+        }
+        .jj{
+            position: absolute;
+            left: 3%;
+            top: 25%;
+        }
+        .jjj{
+            position: absolute;
+            left: 3%;
+            top: 35%;
+        }
+        .jjjj{
+            position: absolute;
+            left: 3%;
+            top: 45%;
+        }
+    </style>
+</head>
+<body onload="kill()">
+<h1 align="center">所有记录</h1>
+<input value="0" id="p" style="display: none"/>
+<input type="button" value="首页" onclick="kill()" style="font-size: 30px;" class="c"/>
+<input type="button" value="下一页" onclick="killTwo()" style="font-size: 30px;" class="j" id="up"/>
+<input type="button" value="上一页" onclick="killThree()" style="font-size: 30px;" class="jj" id="down"/>
+<input type="button" value="返回管理界面" onclick="aaa()" style="font-size: 30px;" class="jjj"/>
+    <div class="a">
+        <form>
+            <table border="1px" style="width: 800px">
+                <thead style="width: 500px">
+                    <td style="font-size: 20px;" align="center">姓名</td>
+                    <td style="font-size: 20px;" align="center">奖品</td>
+                    <td style="font-size: 20px;" align="center">时间</td>
+                    <td style="font-size: 20px;" align="center">电话</td>
+                </thead>
+                <tbody id="kill">
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+<script>
+    function aaa() {
+        window.location.href='sysIndex.html';
+    }
+</script>
+</html>

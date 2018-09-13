@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="refresh" content="5;url=http://localhost:8080/users/successfulTwo"/>
+    <title>Title</title>
+</head>
+<body onload="showtime()">
+        <p style="font-size: 120px" align="center">确认成功</p>
+        <p style="font-size: 100px" align="center"><span id="CountDown"></span>秒后返回抽奖界面</p>
+</body>
+
+<script type="text/javascript">
+    var i = 6;
+    function showtime() {
+        i = i - 1;
+        document.getElementById("CountDown").innerHTML = i;
+        if (i > 1) {
+            setTimeout('showtime()', 1000);
+        }
+    }
+</script>
+
+</html>

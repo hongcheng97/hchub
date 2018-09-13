@@ -1,0 +1,76 @@
+SYSTEM:
+    ImagesPath: /root/orange/uploadfile/
+logging:
+    level:
+        root: INFO
+        sample:
+            mybatis:
+                mapper: TRACE
+spring:
+    aop:
+        auto: true
+    application:
+        name: orange
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        password: root
+        url: jdbc:mysql://10.10.10.236:3306/orangetest?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+    redis:
+        database: 0
+        host: 127.0.0.1
+        password: ''
+        pool:
+            max-active: 8
+            max-idle: 8
+            max-wait: -1
+            min-idle: 0
+        port: 6379
+        timeout: 0
+    thymeleaf:
+      suffix: .html
+      prefix: classpath:/templates/
+      mode: HTML5
+      encoding: UTF-8
+      content-type: text/html
+      cache: true
+
+mapper:
+  identity: MYSQL
+  b-e-f-o-r-e: true
+  u-u-i-d: true
+swagger:
+    apply-default-response-messages: true
+    base-package: cn.xydata
+    description: 'orange '
+    global-operation-parameters:
+    -   description: user access token
+        modelRef: string
+        name: access_token
+        parameterType: header
+        required: true
+    -   description: access timestamp
+        modelRef: int
+        name: timestamp
+        parameterType: header
+        required: false
+    global-response-message:
+        get:
+        -   code: 401
+            message: 401get
+        -   code: 500
+            message: 500get
+            modelRef: ERROR
+    title: orange
+    ui-config:
+        json-editor: false
+        request-timeout: 5000
+        show-request-headers: true
+    version: 0.0.1-SNAPSHOT
+server:
+  port: 8088
+ding:
+  agentId: 183513160
+banner:
+  image:
+    location: classpath:/static/

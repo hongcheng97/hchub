@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>注册界面</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 400px;
+            height: 500px;
+        }
+        .a{
+            position: absolute;
+            top: 40%;
+            left: 40%;
+        }
+        h1{
+            position: absolute;
+            top:10%;
+            left:40%;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">注册界面</h1>
+    <div class="a">
+        <form action="/users/zhuce1" method="post">
+            <p>账号：<input name="userName" type="text" style="height: 30px"/></p>
+            <p>&nbsp;</p>
+            <p>密码：<input name="password"  type="text" style="height: 30px"/></p>
+            <p>&nbsp;</p>
+            <p>电话：<input name="phone" type="text" style="height: 30px"/></p>
+            <p>&nbsp;</p>
+            <input type="submit" value="注册" style="width: 100px;height: 50px" />
+        </form>
+    </div>
+</body>
+</html>

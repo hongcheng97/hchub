@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>用户抽奖界面</title>
+    <script  src="/jq/jquery-1.10.2.min.js"></script>
+    <script src="/jq/user.js"></script>
+    <style type="text/css">
+        h1{
+            position: absolute;
+            top:3%;
+            left:45%;
+        }
+        .a{
+            position: absolute;
+            top: 10%;
+            left: 3%;
+        }
+        .b{
+            position: absolute;
+            top: 2%;
+            left: 3%;
+        }
+        .j{
+            position: absolute;
+            top: 35%;
+            left: 40%;
+        }
+        .jian{
+            position: absolute;
+            top: 15%;
+            left: 50%;
+        }
+        .pq{
+            position: absolute;
+            left: 3%;
+            top: 50%;
+        }
+        #xhx{
+            position: absolute;
+            left: 70%;
+            top: 20%;
+        }
+        #hc{
+            transition:transform 3s;
+            -webkit-transition:-webkit-transform 3s;
+        }
+        /*img:link{*/
+        /*transform:rotate(360deg);*/
+        /*-webkit-transform:rotate(3600deg);*/
+        /*}*/
+    </style>
+
+</head>
+<body>
+<h1>用户抽奖界面</h1>
+<div class="jian">
+    <img src="/jq/jian.jpg"/>
+</div>
+<div class="j">
+    <img src="/jq/img.jpg" id="hc"/>
+</div>
+<div class="a">
+    <table>
+        <tr>
+            <td height="100px"><input id="start" type="button" value="开始抽奖" style="height: 50px;" onclick="sum()" disabled="disabled"/></td>
+            <!--<td height="100px"><input id="jkl" disabled="disabled" type="button" value="奖品认证" style="height: 50px;" onclick="ja()"/></td>-->
+        </tr>
+        <tr>
+            <td height="100px"><input type="button" value="个人抽奖历史" style="height: 50px;" onclick="aaa()"/></td>
+        </tr>
+    </table>
+</div>
+<div class="b">
+    <a href="/users/login" style="font-size: 20px;text-decoration: none;color: green;">退出</a>
+</div>
+<div class="pq">
+    <button id="test" onclick="aa()">查看奖品信息</button>
+    <table border="1px">
+        <thead>
+        <tr>
+            <td>奖品</td>
+            <td>等级</td>
+            <td>期数</td>
+            <td>概率</td>
+        </tr>
+        </thead>
+        <tbody id="ss">
+
+        </tbody>
+    </table>
+</div>
+<div id="xhx" style="display: none" >
+    <form action="/info/add" method="post">
+        <p>姓名<input type="text"  name="userName" id="na"/></p>
+        <p>奖品<input type="text" name="presentName" id="pri" readonly="readonly"/></p>
+        <p>电话<input type="text" name="phone" id="ph"/></p>
+        <p>时间<input type="text" name="date" id="ti" readonly="readonly"/></p>
+        <input type="submit" value="确认"/>
+        &nbsp;
+        <input type="button" value="客服电话0100-123456"/>
+    </form>
+</div>
+</body>
+<script>
+    function aaa() {
+        window.location.href="persenalHistory.html";
+    }
+</script>
+</html>

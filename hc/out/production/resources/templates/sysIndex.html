@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script  src="/jq/jquery-1.10.2.min.js"></script>
+    <script  src="/jq/sysindex.js"></script>
+    <meta charset="UTF-8"/>
+    <title>管理员管理界面</title>
+    <style type="text/css">
+        a{
+            position: absolute;
+            top: 2%;
+            left: 2%;
+        }
+        .b{
+            position: absolute;
+            left: 20%;
+            top: 10%;
+        }
+        td{
+            width: 100px;
+        }
+    </style>
+</head>
+<body onload="aaa()">
+    <h1 align="center">管理员管理界面</h1>
+    <a href="/users/login" style="font-size: 20px;text-decoration: none;color: green;">退出</a>
+    <div class="a">
+        <input type="button" value="显示奖品" id="cc" onclick="bbb()"/>
+        <input type="button" value="所有记录" onclick="location='allRecord.html'"/>
+    </div>
+
+    <div id="c" style="display: block">
+        <button id="test" onclick="aaa()">刷新</button>
+        <button id="h" onclick="hhh()">修改</button>
+        <table border="1px">
+           <thead>
+             <tr>
+               <td>奖品</td>
+               <td>等级</td>
+               <td>期数</td>
+               <td>概率</td>
+             </tr>
+           </thead>
+            <tbody id="sss">
+               
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

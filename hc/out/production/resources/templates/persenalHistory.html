@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>个人抽奖历史</title>
+    <script  src="/jq/jquery-1.10.2.min.js"></script>
+    <script  src="/jq/userindex.js"></script>
+    <style type="text/css">
+        .b{
+            position: absolute;
+            top: 2%;
+            left: 3%;
+        }
+        .a{
+            position: absolute;
+            top: 10%;
+            left: 25%;
+        }
+        td{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">个人抽奖记录</h1>
+<div class="b">
+    <a href="/users/login" style="font-size: 20px;text-decoration: none;color: green;">退出</a>
+</div>
+<div>
+    <input value="查询" type="button" onclick="ok()"/>
+</div>
+
+<div class="a">
+    <table border="1px">
+        <thead>
+            <td style="font-size: 20px;" align="center">姓名</td>
+            <td style="font-size: 20px;" align="center">奖品</td>
+            <td style="font-size: 20px;" align="center">电话</td>
+            <td style="font-size: 20px;" align="center">日期</td>
+        </thead>
+        <tbody id="persenalHistory">
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

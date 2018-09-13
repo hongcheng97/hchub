@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>鑫义科技抽奖登陆界面</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 400px;
+            height: 500px;
+        }
+        .a{
+            position: absolute;
+            top: 40%;
+            left: 40%;
+        }
+        h1{
+            position: absolute;
+            top:10%;
+            left:40%;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center">鑫义科技抽奖登陆界面</h1>
+    <div class="a">
+        <form action="/users/login1" method="get">
+        <table>
+            <tr>
+                <td>账号：<input  name="userName" type="text" id="user"/></td>
+            </tr>
+            <tr>
+                <td>密码：<input  name="password" type="password"/></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="注册" onclick="aaa()"/></td>
+                <td><input type="submit" value="登陆"/></td>
+            </tr>
+        </table>
+        </form>
+    </div>
+</body>
+<script>
+    function aaa() {
+        window.location.href='zhuce.html';
+    }
+</script>
+</html>
